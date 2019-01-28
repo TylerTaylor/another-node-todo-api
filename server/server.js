@@ -111,7 +111,7 @@ app.post('/users', (req, res) => {
   })
 })
 
-app.get('/users/profile', (req, res) => {
+app.get('/users/profile', authenticate, (req, res) => {
   res.send(req.user)
 })
 
